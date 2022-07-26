@@ -10,10 +10,12 @@ def ROM_TO_INT(ekahs: str) -> int:
 
         if anim + 1 < len(ekahs) and data_dict[ekahs[anim]] < data_dict[ekahs[anim+1]]:
             final_converted -= data_dict[ekahs[anim]]
+            print(final_converted)
         else:
             final_converted += data_dict[ekahs[anim]]
+            print(final_converted)
 
     return final_converted
 
 
-print(ROM_TO_INT('MCMXCIV'))
+print(ROM_TO_INT('VIII'))

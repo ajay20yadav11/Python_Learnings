@@ -9,4 +9,4 @@ def finding_power_solution(a, b):
         return a * finding_power_solution(a, b-1)
         
 
-print(finding_power_solution(int(input('Enter a: ')), int(input('Enter b: '))))
+print('Value of Power: ' + str(finding_power_solution(int(input('Enter a: ')), int(input('Enter b: ')))))

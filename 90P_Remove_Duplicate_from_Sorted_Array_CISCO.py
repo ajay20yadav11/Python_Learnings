@@ -1,33 +1,34 @@
-# # Remove all Duplicate Number with individual
-# class Omnicreate:
+def remove_duplicate(nums):
 
-#     def remove_all_duplicate(self, ekahs):
+    total_poped = 0
 
-#         while ekahs:
-#             new_ekash = list()
+    index_to_tra = 0
+    last_element = len(nums)
+    cond = True
 
-#             min_val = min(ekahs)
+    while index_to_tra < last_element:
+    
+        while cond:
+            if nums[index_to_tra] in nums[index_to_tra+1:]:
 
-#             for anim in ekahs:
+                nums.pop(index_to_tra)
+                total_poped += 1
+            else:
+                cond = False
+        
+        cond = True
+        
+        index_to_tra += 1
+        last_element = len(nums)
 
-#                 if anim != min_val:
-
-#                     new_ekash.append(anim)
-
-#             ekahs = [anim-min_val for anim in new_ekash]
-
-#             print('Minimum of array is ' + str(min_val) + ' and now the final arrary: ' + str(ekahs))
-
-
-
-# create = Omnicreate()
-
-animated = [1, 2, 2, 3, 4, 5, 5, 5, 6, 3, 2]
-
-# print(create.remove_all_duplicate(animated))
-
-
-
-for anim, bnim in enumerate(animated):
+    for anim in range(0, total_poped):
+        nums.append(0)
 
     
+    return nums
+
+
+
+animated = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+
+print(remove_duplicate(animated))
