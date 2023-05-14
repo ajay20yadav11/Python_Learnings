@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Graph:
     def __init__(self):
         self.nodes = set()
@@ -11,13 +12,14 @@ class Graph:
 
     def addEgde(self, fromNode, toNode, distance):
         self.edges[fromNode].append(toNode)
-        self.distances[(fromNode, toNode)] = distance 
+        self.distances[(fromNode, toNode)] = distance
+
 
 def dijkstar(graph, initial):
-    visited = {initial: 0}       #set the starting point to zero and others to infinity
+    visited = {initial: 0}  # set the starting point to zero and others to infinity
 
-    path = defaultdict(list)    #to store unordered data like map format or graphs
-    nodes = set(graph.nodes)    #to set values such as not repeating hence used set
+    path = defaultdict(list)  # to store unordered data like map format or graphs
+    nodes = set(graph.nodes)  # to set values such as not repeating hence used set
 
     while nodes:
         minNode = None
@@ -27,7 +29,7 @@ def dijkstar(graph, initial):
                     minNode = node
                 elif visited[node] < visited[minNode]:
                     minNode = node
-        
+
         if minNode is None:
             break
 
@@ -44,14 +46,14 @@ def dijkstar(graph, initial):
 
 
 customdict = Graph()
-customdict.addNode('a')
-customdict.addNode('b')
-customdict.addNode('c')
-customdict.addNode('d')
-customdict.addNode('e')
-customdict.addEgde('a', 'b', 2)
-customdict.addEgde('a', 'c', 3)
+customdict.addNode("a")
+customdict.addNode("b")
+customdict.addNode("c")
+customdict.addNode("d")
+customdict.addNode("e")
+customdict.addEgde("a", "b", 2)
+customdict.addEgde("a", "c", 3)
 print(customdict.nodes)
 print(customdict.edges)
 print(customdict.distances)
-print(dijkstar(customdict, 'a'))
+print(dijkstar(customdict, "a"))

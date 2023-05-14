@@ -1,20 +1,24 @@
 #   Created by Elshad Karimov on 27/04/2020.
 #   Copyright © 2020 AppMillers. All rights reserved.
 
+
 class Node:
     def __init__(self, value=None):
-        self.value = value      #initialize value using self.value
-        self.next = None        #first initialize self.next as none......need?
+        self.value = value  # initialize value using self.value
+        self.next = None  # first initialize self.next as none......need?
+
 
 class SLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-    def __iter__(self):         # to iterate at every value in linkedlist
+
+    def __iter__(self):  # to iterate at every value in linkedlist
         node = self.head
         while node:
             yield node
             node = node.next
+
     # insert in Linked List
     def insertSLL(self, value, location):
         newNode = Node(value)
@@ -48,10 +52,11 @@ class SLinkedList:
             while node is not None:
                 print(node.value)
                 node = node.next
+
     # Search for a node in Singly Linked List
     def searchSLL(self, nodeValue):
         if self.head is None:
-           return "The list does not exist"
+            return "The list does not exist"
         else:
             node = self.head
             while node is not None:
@@ -91,6 +96,7 @@ class SLinkedList:
                     index += 1
                 nextNode = tempNode.next
                 tempNode.next = nextNode.next
+
     # Delete entire SLL
     def deleteEntireSLL(self):
         if self.head is None:
@@ -109,12 +115,6 @@ singlyLinkedList.insertSLL(0, 0)
 singlyLinkedList.insertSLL(0, 4)
 
 
-# print([node.value for node in singlyLinkedList]) 
+# print([node.value for node in singlyLinkedList])
 # singlyLinkedList.deleteEntireSLL()
-# print([node.value for node in singlyLinkedList]) 
-
-
-
-
-
-
+# print([node.value for node in singlyLinkedList])

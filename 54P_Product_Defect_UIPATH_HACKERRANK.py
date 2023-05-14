@@ -15,19 +15,25 @@ class OmniCreate:
         if initial_defect < final_defect:
             for anim in range(initial_defect, final_defect):
                 for bnim in range(initial_defect, final_defect):
-                        print(ekahs[anim][bnim], anim, bnim)
+                    print(ekahs[anim][bnim], anim, bnim)
                 final_defect -= 1
                 initial_defect += 1
 
-            
-            
-
-
         return output
+
 
 create = OmniCreate()
 
-print(create.productDefect([[1, 1, 1,],[1, 1, 0],[1, 0, 1]]))
-
-
-
+print(
+    create.productDefect(
+        [
+            [
+                1,
+                1,
+                1,
+            ],
+            [1, 1, 0],
+            [1, 0, 1],
+        ]
+    )
+)

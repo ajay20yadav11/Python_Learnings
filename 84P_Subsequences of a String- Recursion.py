@@ -7,11 +7,11 @@ class OmniCreate:
             else:
                 print(output)
                 new_set.add(output)
-                return        
-        self.subsequence(ekahs, index+1, output+ekahs[index], new_set)
-        self.subsequence(ekahs, index+1, output, new_set)
-       
-        
+                return
+        self.subsequence(ekahs, index + 1, output + ekahs[index], new_set)
+        self.subsequence(ekahs, index + 1, output, new_set)
+
+
 create = OmniCreate()
 new_set = set()
-print(create.subsequence('aaabbbccc', 0, '', new_set))
+print(create.subsequence("aaabbbccc", 0, "", new_set))

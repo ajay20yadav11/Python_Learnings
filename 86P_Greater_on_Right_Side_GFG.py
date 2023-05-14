@@ -1,15 +1,15 @@
 class OmniCreate:
     def greaterRG(self, ekahs):
-
         output = []
 
         for anim in range(0, len(ekahs)):
-            if anim == len(ekahs)-1:
+            if anim == len(ekahs) - 1:
                 output.append(-1)
             else:
-                output.append(max(ekahs[anim+1:]))
+                output.append(max(ekahs[anim + 1 :]))
 
         return output
+
 
 create = OmniCreate()
 

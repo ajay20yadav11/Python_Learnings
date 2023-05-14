@@ -1,6 +1,5 @@
 class OmniCreate:
     def Book_Allocation(self, A, B):
-
         dump_addition = []
 
         iter = 1
@@ -15,8 +14,10 @@ class OmniCreate:
             output.append(max(anim))
 
         return min(output)
-        
+
 
 create = OmniCreate()
 
-print(create.Book_Allocation([12, 1, 1, 1, 1, 1, 1, 1, 1, 1, 134, 67, 90, 22, 11, 33], 4))
+print(
+    create.Book_Allocation([12, 1, 1, 1, 1, 1, 1, 1, 1, 1, 134, 67, 90, 22, 11, 33], 4)
+)

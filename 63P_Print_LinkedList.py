@@ -3,7 +3,7 @@
 from decimal import localcontext
 
 
-class Node():
+class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
@@ -14,6 +14,7 @@ class SLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+
     # Now to insert a value in Linked List in a already defined LL
 
     def __iter__(self):
@@ -62,37 +63,36 @@ class SLinkedList:
 
 
 def printReverseLL(head):
-
     if head == None:
-        return 
+        return
     printReverseLL(head.next)
     print(head.value)
-    
-def printLL(head):
 
+
+def printLL(head):
     temp = head
     while temp != None:
         print(temp.value)
         temp = temp.next
 
+
 def compareLL(firstLL, secondLL):
-    
     condition_checker = True
     temp1, temp2 = firstLL, secondLL
     while temp1 and temp2:
         if temp1.value != temp2.value:
             condition_checker = False
         temp1, temp2 = temp1.next, temp2.next
-    
+
     if condition_checker == True:
-        print('Condition OK!')
+        print("Condition OK!")
     else:
-        print('Condition NOT OK!')
+        print("Condition NOT OK!")
+
 
 def mergeLL(firstLL, secondLL):
-
     if firstLL == None and secondLL == None:
-        return 
+        return
     if firstLL == None:
         return secondLL
     if secondLL == None:
@@ -109,7 +109,6 @@ def mergeLL(firstLL, secondLL):
 
 
 def removeDuplicate(ekahs):
-
     temp = ekahs
 
     while temp:
@@ -118,6 +117,7 @@ def removeDuplicate(ekahs):
         temp = temp.next
 
     return ekahs
+
 
 first_singleLinkedList = SLinkedList()
 second_singleLinkedList = SLinkedList()
@@ -132,7 +132,6 @@ first_singleLinkedList.insertLinkedList(5, 5)
 second_singleLinkedList.insertLinkedList(3, 0)
 second_singleLinkedList.insertLinkedList(5, 1)
 second_singleLinkedList.insertLinkedList(6, 2)
-
 
 
 printLL(first_singleLinkedList.head)

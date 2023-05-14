@@ -1,24 +1,20 @@
 def encode(ekahs):
-
     output = ""
     for anim in range(len(ekahs)):
-
-        output += str(len(ekahs[anim])) + '#' + ekahs[anim] 
-
+        output += str(len(ekahs[anim])) + "#" + ekahs[anim]
 
     return output
 
 
 def decode(ekahs):
-
     output, anim = [], 0
 
     while anim < len(ekahs):
         bnim = anim
-        while ekahs[bnim] != '#':
+        while ekahs[bnim] != "#":
             bnim += 1
         leg = int(ekahs[anim:bnim])
-        output.append(ekahs[(bnim+1):(bnim+1+leg)])
+        output.append(ekahs[(bnim + 1) : (bnim + 1 + leg)])
         anim = bnim + 1 + leg
 
     return output

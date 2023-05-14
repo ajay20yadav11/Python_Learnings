@@ -1,7 +1,5 @@
 class OmniCreate:
-
     def twoOutofThree(self, ekahs: list[int], duva: list[int], tri: list[int]):
-
         final_term = []
 
         for anim in range(len(ekahs)):
@@ -19,8 +17,8 @@ class OmniCreate:
                 if tri[anim] not in final_term:
                     final_term.append(tri[anim])
 
-
         return final_term
+
 
 create = OmniCreate()
 

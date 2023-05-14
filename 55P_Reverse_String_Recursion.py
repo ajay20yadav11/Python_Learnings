@@ -1,16 +1,15 @@
 class OmniCreate:
     def reverseString(self, ekahs, cvalue):
-
         if cvalue == 0:
             print(ekahs[cvalue])
-            return 
-        
+            return
+
         print(ekahs[cvalue])
-        self.reverseString(ekahs, cvalue-1)
+        self.reverseString(ekahs, cvalue - 1)
 
 
 create = OmniCreate()
 
-new_string = 'abcd'
+new_string = "abcd"
 
-print(create.reverseString(new_string, len(new_string)-1))
+print(create.reverseString(new_string, len(new_string) - 1))

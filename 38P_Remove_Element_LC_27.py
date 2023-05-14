@@ -1,8 +1,5 @@
-class OmniCreate():
-
+class OmniCreate:
     def removeElement(self, nums: list[int], val: int) -> int:
-
-
         value = 0
         for anim in range(len(nums)):
             if nums[anim] != val:
