@@ -17,3 +17,7 @@ animated_directory = [21, 43, 65, 12, 2, 5, 7, 8, 93, 32]
 # animated_directory = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 print(Insertion_Sort(animated_directory))
+
+
+
+

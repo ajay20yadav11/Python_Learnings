@@ -1,25 +1,15 @@
-# Quick Sort
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
 
+    pivot = arr[len(arr) // 2]  # Choose the middle element as the pivot
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
 
-def partition(ekahs, low, high):
-    animated = low - 1
-    pivot = ekahs[high]
-    for anim in range(low, high):
-        if ekahs[anim] <= pivot:
-            animated += 1
-            ekahs[animated], ekahs[anim] = ekahs[anim], ekahs[animated]
-    ekahs[animated + 1], ekahs[high] = ekahs[high], ekahs[animated + 1]
-    return animated + 1
+    return quick_sort(left) + middle + quick_sort(right)
 
-
-def Quick_Sort(ekahs, low, high):
-    if low < high:
-        pi = partition(ekahs, low, high)
-        Quick_Sort(ekahs, low, pi - 1)
-        Quick_Sort(ekahs, pi + 1, high)
-
-
-animated_list = [9, 8, 7, 6, 5, 4, 2, 1]
-print(animated_list)
-Quick_Sort(animated_list, 0, len(animated_list) - 1)
-print(animated_list)
+# Example usage:
+arr = [64, 34, 25, 12, 22, 11, 90]
+sorted_arr = quick_sort(arr)
+print("Sorted array:", sorted_arr)

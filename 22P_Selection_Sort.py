@@ -12,8 +12,6 @@ def Bubble_Sort(ekahs):
         for bnim in range(len(ekahs) - 1 - anim):
             if ekahs[bnim] > ekahs[bnim + 1]:
                 ekahs[bnim], ekahs[bnim + 1] = ekahs[bnim + 1], ekahs[bnim]
-            print(ekahs)
-        print("ani anim anim m")
 
     return ekahs
 

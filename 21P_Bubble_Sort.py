@@ -19,25 +19,26 @@ Using Recursion
 """
 
 
-def Selection_Sort(ekahs, anim):
-    if anim == len(ekahs):
-        return
+# def Selection_Sort(ekahs, anim):
+#     if anim == len(ekahs):
+#         return
 
-    for bnim in range(anim + 1, len(ekahs)):
-        if ekahs[anim] > ekahs[bnim]:
-            ekahs[anim], ekahs[bnim] = ekahs[bnim], ekahs[anim]
+#     for bnim in range(anim + 1, len(ekahs)):
+#         if ekahs[anim] > ekahs[bnim]:
+#             ekahs[anim], ekahs[bnim] = ekahs[bnim], ekahs[anim]
 
-    Selection_Sort(ekahs, anim + 1)
+#     Selection_Sort(ekahs, anim + 1)
 
-    return ekahs
+#     return ekahs
 
 
-new_directory = "nagaram"
+# new_directory = "nagaram"
 
 
 animated_directory = [22, 66, 88, 33, 55, 77, 99, 44, 11]
 
-print(Selection_Sort(animated_directory, 0))
+# print(Selection_Sort(animated_directory, 0))
+print(Selection_Sort(animated_directory))
 
 # if Selection_Sort([anim for anim in animated_directory]) == Selection_Sort([anim for anim in new_directory]):
 #     print(True)

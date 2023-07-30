@@ -1,38 +1,24 @@
-# input1 = [2, 7, 11, 15] target = 9 output = [0, 1]
-# input2 = [3, 2, 4] target = 6 output = [1, 2]
-# input3 = [3, 3] targer = 6 output = [0, 1]
+def max_elements_sum_target(target, elements):
+    elements.sort(reverse=True)
+
+    def backtrack(curr_sum, start_idx):
+        if curr_sum == target:
+            return 0
+
+        max_elements = 0
+        for i in range(start_idx, len(elements)):
+            if curr_sum + elements[i] <= target:
+                num_elements = backtrack(curr_sum + elements[i], i + 1)
+                max_elements = max(max_elements, num_elements + 1)
+
+        return max_elements
+
+    result = backtrack(0, 0)
+    return result if result > 0 else 0
 
 
-def compare_target(ekahs, guni):
-    # for edge case with only 2 or less items in ekahs list which means we could have only two options and addition will give us the value to compare
-    found_target = list()
-    if len(ekahs) <= 2:
-        if sum(ekahs) == guni:
-            for anim in ekahs:
-                found_target.append(anim)
-
-    # now to check for items greater than 2
-    else:
-        for anim in range(len(ekahs)):
-            for bnim in ekahs:
-                if ekahs[anim] == bnim:
-                    pass
-                else:
-                    comp_number = ekahs[anim] + bnim
-                    if comp_number == guni:
-                        if anim not in found_target:
-                            found_target.append(anim)
-                    else:
-                        pass
-
-    print(found_target)
-
-
-input1 = [2, 7, 11, 15]
-input2 = [3, 2, 4]
-input3 = [3, 3]
-
-
-compare_target(input1, 9)
-compare_target(input2, 6)
-compare_target(input3, 6)
+# Test the function
+elements = [2, 3, 5, 5]
+target = 20
+result = max_elements_sum_target(target, elements)
+print(result)
