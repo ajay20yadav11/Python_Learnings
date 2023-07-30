@@ -1,0 +1,21 @@
+questions for Practise:
+
+Search in Rotated Sorted Array: Given a rotated sorted array and a target value, find the target value's index (or return -1 if not found). Example: Input: [4, 5, 6, 7, 0, 1, 2], Target: 0, Output: 4.
+
+Search Insert Position: Given a sorted array and a target value, return the index where the target value should be inserted to maintain the array's sorted order. Example: Input: [1, 3, 5, 6], Target: 5, Output: 2.
+
+First Bad Version: Given a range of versions [1, 2, ..., n], and a function isBadVersion(version) which returns true if the version is bad and false if it's good. Find the first bad version. Example: Input: 5 (with versions 1 to 5, and 4 as the first bad version), Output: 4.
+
+Peak Index in a Mountain Array: Given an array that is strictly increasing up to a certain index and strictly decreasing after that, find the peak element's index. Example: Input: [0, 1, 2, 4, 2, 1], Output: 3.
+
+Find Minimum in Rotated Sorted Array: Given a rotated sorted array, find the minimum element. Example: Input: [4, 5, 6, 7, 0, 1, 2], Output: 0.
+
+Median of Two Sorted Arrays: Given two sorted arrays, find the median element of the combined array. Example: Input: [1, 3], [2], Output: 2.0 (Median of [1, 2, 3]).
+
+Find Peak Element: Given an array that has a peak element (an element greater than its neighbors), find the peak element's index. Example: Input: [1, 2, 3, 1], Output: 2.
+
+Search a 2D Matrix: Given a 2D matrix sorted by rows, search for a target value in the matrix. Example: Input: [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], Target: 3, Output: True.
+
+Count Negative Numbers in a Sorted Matrix: Given an m x n matrix sorted in non-decreasing order, count the number of negative numbers in it. Example: Input: [[-3, -2, -1], [-2, -1, 0], [-1, 0, 1]], Output: 6.
+
+Find Right Interval: Given a set of intervals, find the rightmost interval that has an end point greater than or equal to a given start point. Example: Input: Intervals = [[1, 4], [2, 3], [3, 4]], Start Point = 2, Output: [1, 4].
