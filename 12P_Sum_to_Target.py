@@ -13,12 +13,10 @@ def max_elements_sum_target(target, elements):
 
         return max_elements
 
-    result = backtrack(0, 0)
-    return result if result > 0 else 0
-
+    return backtrack(0, 0)
 
 # Test the function
 elements = [2, 3, 5, 5]
-target = 20
+target = 5
 result = max_elements_sum_target(target, elements)
 print(result)

@@ -12,6 +12,7 @@ class OmniCreate:
         middle = left + (right - left) // 2
 
         while left < right:
+            breakpoint()
             if arr[middle] < arr[middle + 1]:
                 left = middle + 1
             else:

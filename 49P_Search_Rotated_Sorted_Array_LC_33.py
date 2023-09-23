@@ -1,47 +1,27 @@
-class OmniCreate:
-    def searchRotSorted(self, ekahs, target):
-        def findPivot(self, ekahs):
-            left, right = 0, len(ekahs) - 1
-            middle = (right - left) // 2
+def search(nums, target):
+    left, right = 0, len(nums) - 1
 
-            if not ekahs:
-                return -1
+    while left <= right:
+        mid = left + (right - left) // 2
 
-            while left < right:
-                if ekahs[middle] >= ekahs[0]:
-                    left = middle + 1
-                else:
-                    right = middle
-                middle = left + (right - left) // 2
+        if nums[mid] == target:
+            return mid
 
-            return left
-
-        def BinarySearch(self, ekahs, left, right, target):
-            middle = (right - left) // 2
-
-            while left < right:
-                if ekahs[middle] == target:
-                    return middle
-                elif ekahs[middle] < target:
-                    left = middle + 1
-                else:
-                    right = middle
-
-                middle = left + (right - left) // 2
-
-            return left
-
-        print(ekahs)
-        pivot = findPivot(self, ekahs)
-
-        left, right = 0, len(ekahs) - 1
-        if ekahs[pivot] < target <= ekahs[right]:
-            return BinarySearch(self, ekahs, pivot, right, target)
-
+        if nums[left] <= nums[mid]:
+            if nums[left] <= target <= nums[mid]:
+                right = mid - 1
+            else:
+                left = mid + 1
         else:
-            return BinarySearch(self, ekahs, left, pivot - 1, target)
+            if nums[mid] <= target <= nums[right]:
+                left = mid + 1
+            else:
+                right = mid - 1
 
+    return -1
 
-create = OmniCreate()
-
-print(create.searchRotSorted([9, 1, 2, 3, 4, 5, 7, 8], int(input("enter: "))))
+# Example usage
+nums = [4, 5, 0, 1, 2, 3]
+target = 2
+result = search(nums, target)
+print("Target", target, "found at index:", result)

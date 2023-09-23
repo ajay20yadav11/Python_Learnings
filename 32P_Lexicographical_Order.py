@@ -27,6 +27,38 @@ class Solution:
         return lexOrder
 
 
+    def lexicalOrder(self, number):
+
+        total_number = [str(num) for num in range(1, number+1)]
+        lexOrder = []
+        for num in range(1, 10):
+            num = str(num)
+            for new_num in total_number:
+                if new_num[0] == num:
+                    lexOrder.append(int(new_num))
+        return lexOrder
+ 
+    def lexicalOrder(self, number):
+
+        def dfs(current_number, result):
+
+            if current_number > number:
+                return
+
+            result.append(current_number)
+            for i in range(1, 10):
+                if 10 * current_number + i > number:
+                    return
+                dfs(10 * current_number + i, result)
+
+
+        result = []
+        for num in range(1, 10):
+            dfs(num, result)
+        return result
+
+
+
 Created = Solution()
 
 print(Created.lexicalOrder(20))

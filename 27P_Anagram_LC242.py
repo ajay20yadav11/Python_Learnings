@@ -54,11 +54,35 @@ def is_anagram(s1, s2):
             return False
         char_count[char] -= 1
 
-        print(char_count, char)
 
     return True
+
+
+
+
+
+
+def is_anagram(s1: str, s2: str) -> bool:
+
+    s1 = s1.replace(' ', '').lower()
+    s2 = s2.replace(' ', '').lower()
+
+    char_dict = {}
+    for char in s1:
+        char_dict.setdefault(char, 0)
+        char_dict[char] += 1
+
+    for char in s2:
+        if (char not in char_dict) or char_dict[char] ==  0:
+            return False
+        char_dict[char] += 1
+
+    return True
+
+
 
 # Test cases
 print(is_anagram("listen", "silent"))  # Output: True
 print(is_anagram("hello", "world"))    # Output: False
 print(is_anagram("Astronomer", "Moon starer"))  # Output: True
+    
